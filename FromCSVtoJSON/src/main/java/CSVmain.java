@@ -12,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
+
 public class CSVmain {
     static String[] employee1 = "1,John,Smith,USA,25".split(",");
     static String[] employee2 = "2,Ivan,Petrov,RU,23".split(",");
@@ -57,7 +58,8 @@ public class CSVmain {
 
             return staff;
 
-        } catch (IOException ex) {ex.printStackTrace();
+        } catch (IOException ex) {
+            ex.printStackTrace();
             return null;
         }
     }
@@ -78,7 +80,9 @@ public class CSVmain {
         try (FileWriter file = new FileWriter(fileName)) {
             file.write(json);
             file.flush();
-        } catch (IOException ex) {ex.printStackTrace();}
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 
 }
